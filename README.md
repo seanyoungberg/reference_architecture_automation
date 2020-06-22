@@ -27,7 +27,6 @@ Next, enter a password for the deployment to assign the admin user.
 
 13. In the **Key** box, enter **PASSWORD**.
 14. In the **Value** box, enter the password you want the admin user of Panorama and the VM-Series to have.
-
 15. Click **Load**.
 
 Next, deploy Panorama.
