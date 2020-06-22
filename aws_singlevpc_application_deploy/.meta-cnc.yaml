@@ -1,0 +1,54 @@
+name: Application on AWS
+
+label: Deploy an Example Application into the AWS Single VPC
+
+description: |
+  Deploy the Application
+
+type: python3
+
+labels:
+  collection:
+    - Reference Architecture Skillet Modules
+
+variables:
+  - name: AWS_ACCESS_KEY_ID
+    description: ID
+    default: 
+    type_hint: hidden
+  - name: AWS_SECRET_ACCESS_KEY
+    description: Secret
+    default:
+    type_hint: hidden
+  - name: DEPLOYMENT_NAME
+    description: Prefix for deployment
+    default: ""
+    type_hint: hidden
+  - name: PASSWORD
+    description: Password for the admin account
+    default:
+    type_hint: hidden
+  - name: Panorama_IP
+    description: Panorama IP
+    default:
+    type_hint: hidden
+  - name: AWS_REGION
+    description: What AWS region do you want to deploy into?
+    type_hint: hidden
+  - name: Init
+    description: Deploy or destroy the environment
+    default: ip_address
+    type_hint: dropdown
+    dd_list:
+      - key: 'Deploy'
+        value: "apply"
+      - key: 'Destroy'
+        value: 'destroy'
+
+snippets:
+  - name: script
+    file: deploy_application.py
+    input_type: env
+
+
+

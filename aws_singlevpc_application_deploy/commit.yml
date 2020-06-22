@@ -1,0 +1,17 @@
+---
+- name: Commit
+  hosts: primary-panorama
+  connection: local
+  gather_facts: False
+
+  collections:
+    - paloaltonetworks.panos
+
+  tasks:
+  - name: Commit candidate configuration
+    panos_commit:
+      provider:
+        ip_address: '{{ ip_address }}'
+        password: '{{ password }}'
+      device_group: 'AWS'
+      include_template: yes

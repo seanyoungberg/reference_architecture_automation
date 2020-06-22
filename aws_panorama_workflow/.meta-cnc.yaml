@@ -1,0 +1,15 @@
+name: Panorama Workflow
+label: Panorama on AWS
+description: |
+  Panorama on AWS Workflow
+
+type: workflow
+
+labels:
+  collection:
+    - Reference Architecture AWS Skillets
+
+snippets:
+  - name: Panorama on AWS
+  - name: Capture Output for IP
+  - name: Configure Panorama

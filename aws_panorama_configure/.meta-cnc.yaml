@@ -1,0 +1,75 @@
+name: Configure Panorama
+
+label: Configure Panorama on AWS
+
+description: |
+  Configure Panorama with optional HA
+
+type: python3
+
+labels:
+  collection:
+    - Reference Architecture Skillet Modules
+
+variables:
+  - name: AWS_ACCESS_KEY_ID
+    description: ID
+    default:
+    type_hint: hidden
+  - name: AWS_SECRET_ACCESS_KEY
+    description: Secret
+    default:
+    type_hint: hidden
+  - name: PASSWORD
+    description: Password for the admin account
+    default:
+    type_hint: hidden
+  - name: Panorama_IP
+    description: Panorama IP
+    default:
+    type_hint: hidden
+  - name: Secondary_IP
+    description: Panorama IP for HA pair
+    default:
+    type_hint: hidden
+  - name: enable_ha
+    description: Deploy as a HA Pair
+    default:
+    type_hint: hidden
+  - name: Primary_Serial
+    description: Serial Number for the Primary Panorama
+    default:
+    type_hint: text
+  - name: OTP
+    # Leave the OTP blank if you don't want to configure CDL.
+    description: OTP for the Primary Panorama from the support portal
+    default:
+    type_hint: text
+  - name: Secondary_Serial
+    description: Serial Number for the Secondary Panorama
+    type_hint: text
+    # Disabling this for now as there is a bug in Panhandler
+    #toggle_hint:
+    #  source: enable_ha
+    #  value: 'true'
+  - name: Secondary_OTP
+    # Leave the OTP blank if you don't want to configure CDL.
+    description: OTP for Second Panorama from the support portal
+    type_hint: text
+    # Disabling this for now as there is a bug in Panhandler
+    #toggle_hint:
+    #  source: enable_ha
+    #  value: "true"
+  - name: Primary_Private_IP
+    description: Private or Internal IP
+    default:
+    type_hint: hidden
+  - name: Secondary_Private_IP
+    description: Private or Internal IP
+    default:
+    type_hint: hidden
+
+snippets:
+  - name: script
+    file: configure_panorama.py
+    input_type: env
