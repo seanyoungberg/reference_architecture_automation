@@ -1,3 +1,9 @@
+# Design
+
+The templates and scripts in this repository are a deployment method for Palo Alto Networks Reference Architectures. You can find details on each of the design models, and step-by-step instructions for deployment at https://www.paloaltonetworks.com/referencearchitectures 
+
+This repository currrently covers the AWS Reference Architecture. Azure and GCP will follow.
+
 # Prerequisits
 
 The tempaltes and scripts in this repository are designed to be used with PanHandler. For details on how to get PanHandler running see: https://panhandler.readthedocs.io/en/master/running.html
