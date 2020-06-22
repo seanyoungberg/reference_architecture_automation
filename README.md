@@ -17,24 +17,29 @@ Next, you need to create an environment that stores your authentication informat
 8. In the **Description** box, enter **AWS Environment**, and then click **Submit**.
 
 Next, create the the authentication key pairs.
+
 9. In the **Key** box, enter **AWS_ACCESS_KEY_ID**.
 10. In the **Value** box, enter your AWS access key.
 11. In the **Key** box, enter **AWS_SECRET_ACCESS_KEY**.
 12. In the **Value** box, enter your AWS secret.
 
 Next, enter a password for the deployment to assign the admin user.
+
 13. In the **Key** box, enter **PASSWORD**.
 14. In the **Value** box, enter the password you want the admin user of Panorama and the VM-Series to have.
 
 15. Click **Load**.
 
 Next, deploy Panorama.
+
 16. Navigate to **PanHandler > Skillet Collections > Reference Architecture AWS Skillets > Panorama on AWS > Go**.
 
-Next, deploy the Single VPC Design Model
+Next, deploy the Single VPC Design Model.
+
 17. Navigate to **PanHandler > Skillet Modules > Deploy AWS Single VPC > Go**.
 
 Optionally, you can deploy an example application on the infrastructure.
+
 18. Navigate to **PanHandler > Skillet Modules > Deploy an Example Application into the AWS Single VPC > Go**.
 
 # Support
