@@ -2,11 +2,11 @@
 
 The templates and scripts in this repository are a deployment method for Palo Alto Networks Reference Architectures. You can find details on each of the design models, and step-by-step instructions for deployment at https://www.paloaltonetworks.com/referencearchitectures 
 
-This repository currrently covers the AWS Reference Architecture. Azure and GCP will follow.
+This repository currently covers the AWS Reference Architecture. Azure and GCP will follow.
 
-# Prerequisits
+# Prerequisites
 
-The tempaltes and scripts in this repository are designed to be used with PanHandler. For details on how to get PanHandler running see: https://panhandler.readthedocs.io/en/master/running.html
+The templates and scripts in this repository are designed to be used with PanHandler. For details on how to get PanHandler running see: https://panhandler.readthedocs.io/en/master/running.html
 
 # Usage
 
@@ -22,7 +22,7 @@ Next, you need to create an environment that stores your authentication informat
 7. In the **Name** box, enter **AWS**.
 8. In the **Description** box, enter **AWS Environment**, and then click **Submit**.
 
-Next, create the the authentication key pairs.
+Next, create the authentication key pairs.
 
 9. In the **Key** box, enter **AWS_ACCESS_KEY_ID**.
 10. In the **Value** box, enter your AWS access key.
