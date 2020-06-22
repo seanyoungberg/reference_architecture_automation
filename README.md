@@ -4,39 +4,38 @@ The tempaltes and scripts in this repository are designed to be used with PanHan
 
 # Usage
 
-Login to Panhandler and navigate to **Panhandler > Import Skillet Repository**.
-In the **Repository Name** box, enter **Reference Architecture Automation**.
-In the **Git Repository HTTPS URL** box, enter **https://github.com/PaloAltoNetworks/reference_architecture_automation.git**, and then click **Submit**.
+1. Login to Panhandler and navigate to **Panhandler > Import Skillet Repository**.
+2. In the **Repository Name** box, enter **Reference Architecture Automation**.
+3. In the **Git Repository HTTPS URL** box, enter **https://github.com/PaloAltoNetworks/reference_architecture_automation.git**, and then click **Submit**.
 
 Next, you need to create an environment that stores your authentication information. 
 
-At the top right of the page, click the lock icon.
-In the **Master Passphrase** box, enter a passphrase, and then click **Submit**.
-Navigate to **PalAlto > Create Environment**.
-In the **Name** box, enter **AWS**.
-In the **Description** box, enter **AWS Environment**, and then click **Submit**.
+4. At the top right of the page, click the lock icon.
+5. In the **Master Passphrase** box, enter a passphrase, and then click **Submit**.
+6. Navigate to **PalAlto > Create Environment**.
+7. In the **Name** box, enter **AWS**.
+8. In the **Description** box, enter **AWS Environment**, and then click **Submit**.
 
-Next, create the 
-In the **Key** box, enter **AWS_ACCESS_KEY_ID**.
-In the **Value** box, enter your AWS access key.
+Next, create the the authentication key pairs.
+9. In the **Key** box, enter **AWS_ACCESS_KEY_ID**.
+10. In the **Value** box, enter your AWS access key.
+11. In the **Key** box, enter **AWS_SECRET_ACCESS_KEY**.
+12. In the **Value** box, enter your AWS secret.
 
-In the **Key** box, enter **AWS_SECRET_ACCESS_KEY**.
-In the **Value** box, enter your AWS secret.
+Next, enter a password for the deployment to assign the admin user.
+13. In the **Key** box, enter **PASSWORD**.
+14. In the **Value** box, enter the password you want the admin user of Panorama and the VM-Series to have.
 
-In the **Key** box, enter **PASSWORD**.
-In the **Value** box, enter the password you want the admin user of Panorama and the VM-Series to have.
-
-Click **Load**.
+15. Click **Load**.
 
 Next, deploy Panorama.
-Navigate to **PanHandler > Skillet Collections > Reference Architecture AWS Skillets > Panorama on AWS > Go**.
+16. Navigate to **PanHandler > Skillet Collections > Reference Architecture AWS Skillets > Panorama on AWS > Go**.
 
 Next, deploy the Single VPC Design Model
-Navigate to **PanHandler > Skillet Modules > Deploy AWS Single VPC > Go**.
+17. Navigate to **PanHandler > Skillet Modules > Deploy AWS Single VPC > Go**.
 
 Optionally, you can deploy an example application on the infrastructure.
-Next, deploy the Single VPC Design Model
-Navigate to **PanHandler > Skillet Modules > Deploy an Example Application into the AWS Single VPC > Go**.
+18. Navigate to **PanHandler > Skillet Modules > Deploy an Example Application into the AWS Single VPC > Go**.
 
 # Support
 
