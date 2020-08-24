@@ -74,6 +74,10 @@ variables:
     description: CIDR block for the Management VPC. Code supports a /16 mask through /29
     default: 10.255.0.0/16
     type_hint: cidr
+  - name: deployment_name
+    description: Unique Name to identify this deployment
+    default: paloaltonetworks-deployment
+    type_hint: text
   - name: specify_network
     description: Do you want to define the network you will access Panorama from manually?
     type_hint: dropdown

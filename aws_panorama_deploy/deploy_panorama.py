@@ -38,7 +38,7 @@ tfcommand = (os.environ.get('Init'))
 
 # Define the working directory for the container as the terraform directory and not the directory of the skillet.
 path = Path(os.getcwd())
-wdir = str(path.parents[0])+'/terraform/aws/panorama/'
+wdir = str(path.parents[0])+'/terraform/TF_VAR_deployment_name/aws/panorama/'
 
 # If the variable is defined for the script to automatically determine the public IP, then capture the public IP
 # and add it to the Terraform variables. If it isn't then add the IP address block the user defined and add it
