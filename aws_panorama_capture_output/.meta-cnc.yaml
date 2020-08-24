@@ -1,6 +1,6 @@
-name: Capture Output for IP
+name: SY Capture Output for IP
 
-label: Capture Panorama IP
+label: SY Capture Panorama IP
 
 description: |
   Capture the Panorama IP details from Terraform
@@ -9,7 +9,7 @@ type: python3
 
 labels:
   collection:
-    - Reference Architecture Skillet Modules
+    - SY Modules
 
 # These two hidden variables are passed to the Python script and ultimately to Terraform
 variables:
