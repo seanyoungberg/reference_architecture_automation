@@ -1,5 +1,5 @@
-name: Panorama Workflow
-label: Panorama on AWS
+name: SY Panorama Workflow
+label: SY Panorama on AWS
 description: |
   Panorama on AWS Workflow
 
@@ -7,9 +7,9 @@ type: workflow
 
 labels:
   collection:
-    - Reference Architecture AWS Skillets
+    - SY Skillets
 
 snippets:
-  - name: Panorama on AWS
+  - name: SY Panorama on AWS
   - name: Capture Output for IP
   - name: Configure Panorama
