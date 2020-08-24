@@ -11,5 +11,5 @@ labels:
 
 snippets:
   - name: SY Panorama on AWS
-  - name: Capture Output for IP
-  - name: Configure Panorama
+  - name: SY Capture Output for IP
+  - name: SY Configure Panorama
