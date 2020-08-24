@@ -1,6 +1,6 @@
-name: Configure Panorama
+name: SY Configure Panorama
 
-label: Configure Panorama on AWS
+label: SY Configure Panorama on AWS
 
 description: |
   Configure Panorama with optional HA
@@ -9,7 +9,7 @@ type: python3
 
 labels:
   collection:
-    - Reference Architecture Skillet Modules
+    - SY Modules
 
 variables:
   - name: AWS_ACCESS_KEY_ID
