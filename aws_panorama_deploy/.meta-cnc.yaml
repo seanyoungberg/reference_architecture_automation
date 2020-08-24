@@ -1,6 +1,6 @@
-name: Panorama on AWS
+name: SY Panorama on AWS
 
-label: Deploy Panorama on AWS
+label: SY Deploy Panorama on AWS
 
 description: |
   Deploy Panorama with optional HA
@@ -9,7 +9,7 @@ type: python3
 
 labels:
   collection:
-    - Reference Architecture Skillet Modules
+    - SY Modules
 
 variables:
   - name: AWS_ACCESS_KEY_ID
