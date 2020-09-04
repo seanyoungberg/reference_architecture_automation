@@ -32,7 +32,7 @@ def copy_dir(src, dst):
     for item in os.listdir(src):
         s = src + item
         d = dst + item
-        if s.is_dir():
+        if os.path.is_dir(s):
             copy_dir(s, d)
         else:
             shutil.copy2(str(s), str(d))
