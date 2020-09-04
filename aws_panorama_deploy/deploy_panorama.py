@@ -6,6 +6,7 @@ import socket
 import requests
 import json
 from pathlib import Path
+import shutil
 # from requests.exceptions import ConnectionError
 # from requests import get
 from docker import DockerClient
@@ -37,8 +38,12 @@ variables.update(TF_VAR_deployment_name=os.environ.get('DEPLOYMENT_NAME'), TF_VA
 tfcommand = (os.environ.get('Init'))
 
 # Define the working directory for the container as the terraform directory and not the directory of the skillet.
+# Copy terraform to new directory to support multiple environments
 path = Path(os.getcwd())
-wdir = str(path.parents[0])+'/terraform/aws/'+os.environ.get('DEPLOYMENT_NAME')+'/panorama/'
+basedir = str(path.parents[0])+'/terraform/aws/'
+envdir = str(path.parents[0])+'/terraform/env/'+os.environ.get('DEPLOYMENT_NAME')+'aws/'
+wdir = str(path.parents[0])+'/terraform/env/'+os.environ.get('DEPLOYMENT_NAME')+'aws/panorama/'
+shutil.copytree(basedir, envdir)
 
 # If the variable is defined for the script to automatically determine the public IP, then capture the public IP
 # and add it to the Terraform variables. If it isn't then add the IP address block the user defined and add it
