@@ -4,7 +4,7 @@ provider "panos" {
 }
 
 terraform {
-  required_version = ">= 0.12, < 0.13"
+  required_version = ">= 0.13, < 0.14"
 }
 
 provider "aws" {
