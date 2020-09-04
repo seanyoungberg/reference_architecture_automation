@@ -27,7 +27,8 @@ def convert(seconds):
 
 # Helper fucntion to copy terraform files from repo to env directory
 def copy_dir(src, dst):
-    dst.mkdir(parents=True, exist_ok=True)
+    os.mkdir(dst, parents=True, exist_ok=True)
+    #dst.mkdir(parents=True, exist_ok=True)
     for item in os.listdir(src):
         s = src / item
         d = dst / item
