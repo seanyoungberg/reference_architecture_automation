@@ -23,7 +23,7 @@ variables:
   - name: DEPLOYMENT_NAME
     description: Prefix for deployment
     default: ""
-    type_hint: hidden
+    type_hint: text
   - name: AWS_REGION
     description: What AWS region do you want to deploy into?
     type_hint: dropdown
