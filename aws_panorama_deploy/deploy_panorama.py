@@ -30,8 +30,8 @@ def copy_dir(src, dst):
     os.makedirs(dst, exist_ok=True)
     #dst.mkdir(parents=True, exist_ok=True)
     for item in os.listdir(src):
-        s = src / item
-        d = dst / item
+        s = src + item
+        d = dst + item
         if s.is_dir():
             copy_dir(s, d)
         else:
