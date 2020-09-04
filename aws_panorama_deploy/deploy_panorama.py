@@ -6,7 +6,6 @@ import socket
 import requests
 import json
 from pathlib import Path
-import shutil
 # from requests.exceptions import ConnectionError
 # from requests import get
 from docker import DockerClient
@@ -25,6 +24,17 @@ def convert(seconds):
     hour, min = divmod(min, 60)
     return '%d:%02d:%02d' % (hour, min, sec)
 
+# Helper fucntion to copy terraform files from repo to env directory
+def copy_dir(src, dst):
+    dst.mkdir(parents=True, exist_ok=True)
+    for item in os.listdir(src):
+        s = src / item
+        d = dst / item
+        if s.is_dir():
+            copy_dir(s, d)
+        else:
+            shutil.copy2(str(s), str(d))
+
 
 # Pull in the AWS Provider variables. These are set in the Skillet Environment and are hidden variables so the
 # user doesn't need to adjust them everytime.
@@ -42,8 +52,10 @@ tfcommand = (os.environ.get('Init'))
 path = Path(os.getcwd())
 basedir = str(path.parents[0])+'/terraform/aws/'
 envdir = str(path.parents[0])+'/terraform/env/'+os.environ.get('DEPLOYMENT_NAME')+'aws/'
+copy_dir(basedir, envdir)
+
+# Set working directory to new environment dir
 wdir = str(path.parents[0])+'/terraform/env/'+os.environ.get('DEPLOYMENT_NAME')+'aws/panorama/'
-shutil.copytree(basedir, envdir)
 
 # If the variable is defined for the script to automatically determine the public IP, then capture the public IP
 # and add it to the Terraform variables. If it isn't then add the IP address block the user defined and add it
